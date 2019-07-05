@@ -1,0 +1,22 @@
+#Options +FollowSymLinks
+Options -Indexes
+IndexIgnore */*
+
+AddDefaultCharset utf-8
+php_value date.timezone Asia/Novosibirsk
+
+RewriteEngine On
+#RewriteBase /api/public
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^ index.php [QSA,L]
+
+   RewriteEngine on
+#   RewriteBase /api
+   RewriteRule ^$ public/     [L]
+   RewriteRule (.*) public/$1 [L]
+
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^ index.php [QSA,L]

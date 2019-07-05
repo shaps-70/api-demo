@@ -1,0 +1,5 @@
+/tests/
+/runtime/
+/vendor/
+/logs/*
+!/logs/README.md
